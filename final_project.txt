@@ -1,0 +1,29 @@
+eksctl create cluster --name simple-jwt-api --nodes=2 --version=1.27 --instance-types=t2.medium --region=us-east-2
+
+eksctl delete cluster simple-jwt-api  --region=us-east-2
+
+
+kubectl get -n kube-system configmap/aws-auth -o yaml > aws-auth-patch.yml
+
+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
+
+aws ssm delete-parameter --name JWT_SECRET
+
+
+aws ssm put-parameter --name JWT_SECRET --value "myjwtsecret" --type  SecureString --region us-east-2
+
+aws ssm put-parameter --name JWT_SECRET --overwrite --value "myjwtsecret" --type SecureString --region us-east-2
+
+aws ssm get-parameter --name JWT_SECRET --region us-east-2
+
+
+
+a69e566e76c7b41d690a0fe2ef3eef69-1166626487.us-east-2.elb.amazonaws.com
+
+
+export TOKEN=`curl -d '{"email":"krb@email.com","password":"Pass_1234"}' -H "Content-Type: application/json" -X POST 
+a69e566e76c7b41d690a0fe2ef3eef69-1166626487.us-east-2.elb.amazonaws.com/auth  | jq -r '.token'`
+
+
+curl --request GET '
+a69e566e76c7b41d690a0fe2ef3eef69-1166626487.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
