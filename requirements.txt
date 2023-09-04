@@ -1,0 +1,16 @@
+blinker
+click
+colorama
+Flask
+gunicorn
+iniconfig
+itsdangerous
+Jinja2
+MarkupSafe
+packaging
+pluggy
+PyJWT==1.7.1
+pytest
+ruamel.yaml
+ruamel.yaml.clib
+Werkzeug
