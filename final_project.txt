@@ -26,4 +26,8 @@ a69e566e76c7b41d690a0fe2ef3eef69-1166626487.us-east-2.elb.amazonaws.com/auth  | 
 
 
 curl --request GET '
-a69e566e76c7b41d690a0fe2ef3eef69-1166626487.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
+a69e566e76c7b41d690a0fe2ef3eef69-1166626487.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq
+
+
+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
+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 
